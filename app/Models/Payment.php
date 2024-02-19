@@ -15,7 +15,7 @@ class Payment extends Model
         'payment_method',
         'payment_status',
         'donator_names', 
-        'donator_phone'
+        'donator_phone','currency'
     ];
 
 }
