@@ -32,7 +32,8 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <meta name="HandheldFriendly" content="True">
     <title>The Cornerstone – Donate</title>
-    <link rel='stylesheet' id='pagebuilder_theme-css' href='{{ asset("css/loading.css") }}?ver=2.0' type='text/css' media='screen' />
+    <link rel='stylesheet' id='pagebuilder_theme-css' href='{{ asset('css/loading.css') }}?ver=2.0' type='text/css'
+        media='screen' />
     <link rel="icon" href="http://thecornerstone.rw/images/logo.png" sizes="16x16">
 
 
@@ -51,28 +52,72 @@
             background: none !important;
             padding: 0 !important;
         }
-        a{
+
+        a {
             text-decoration: none;
         }
-        form{
+
+        form {
             width: 30vw;
         }
+
         @media screen and (max-width: 768px) {
-            .media-block-title
-            {
-                display: none;
+           
+            form{
+                width:100%;
             }
-            .media-block-info{
-                margin-top: 4vh;
-            }
-            form input{
-            width: 80vw;
         }
-        form button{
-            margin-bottom : 4vh;
-            
+
+        .parent>.row {
+            display: flex;
+            align-items: center;
+            height: 100%;
         }
-            
+
+        .col img {
+            height: 100px;
+            width: 100%;
+            cursor: pointer;
+            transition: transform 1s;
+            object-fit: cover;
+        }
+
+        .col label {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .imgbgchk:checked+label>.tick_container {
+            opacity: 1;
+        }
+
+        /*         aNIMATION */
+        .imgbgchk:checked+label>img {
+            transform: scale(1.25);
+            opacity: 0.3;
+        }
+
+        .tick_container {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .tick {
+            background-color: #7A277C;
+            color: white;
+            font-size: 16px;
+            padding: 6px 12px;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
         }
     </style>
 
@@ -93,12 +138,11 @@
 
             <a href="/" id="logo" class="header-logo">
                 <picture>
-                    <source type="image/svg+xml"
-                        srcset="http://thecornerstone.rw/images/logo.png" />
+                    <source type="image/svg+xml" srcset="http://thecornerstone.rw/images/logo.png" />
                     <img srcset="http://thecornerstone.rw/images/logo.png, http://thecornerstone.rw/images/logo.png"
-                        src="http://thecornerstone.rw/images/logo.png"
-                        width="40" height="40" alt="The Corner" class="header-logo-image" />
-                        
+                        src="http://thecornerstone.rw/images/logo.png" width="40" height="40" alt="The Corner"
+                        class="header-logo-image" />
+
                 </picture>
                 <h1 class="visually-hidden">The Cornerstone</h1>
             </a>
@@ -115,20 +159,16 @@
                             </div>
                             <div class="dropdown-item-outer">
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">History</a></span>
+                                    <span><a href="" class="nav-item-link">History</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Our Beliefs</a></span>
+                                    <span><a href="" class="nav-item-link">Our Beliefs</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Our Aims</a></span>
+                                    <span><a href="" class="nav-item-link">Our Aims</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Our Impact</a></span>
+                                    <span><a href="" class="nav-item-link">Our Impact</a></span>
                                 </li>
                             </div>
                         </ul>
@@ -142,16 +182,13 @@
                             </div>
                             <div class="dropdown-item-outer">
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">About Us</a></span>
+                                    <span><a href="" class="nav-item-link">About Us</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Our People</a></span>
+                                    <span><a href="" class="nav-item-link">Our People</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Our Governance</a></span>
+                                    <span><a href="" class="nav-item-link">Our Governance</a></span>
                                 </li>
                             </div>
                         </ul>
@@ -166,24 +203,19 @@
                             </div>
                             <div class="dropdown-item-outer">
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Our Research and Insights</a></span>
+                                    <span><a href="" class="nav-item-link">Our Research and Insights</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">News and Opinion</a></span>
+                                    <span><a href="" class="nav-item-link">News and Opinion</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">In the Press</a></span>
+                                    <span><a href="" class="nav-item-link">In the Press</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Podcast</a></span>
+                                    <span><a href="" class="nav-item-link">Podcast</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Sign up to our Newsletter</a></span>
+                                    <span><a href="" class="nav-item-link">Sign up to our Newsletter</a></span>
                                 </li>
                             </div>
                         </ul>
@@ -197,20 +229,17 @@
                             </div>
                             <div class="dropdown-item-outer">
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Partnerships and Consultancy</a></span>
+                                    <span><a href="" class="nav-item-link">Partnerships and
+                                            Consultancy</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Policy Positions</a></span>
+                                    <span><a href="" class="nav-item-link">Policy Positions</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Our Campaigns</a></span>
+                                    <span><a href="" class="nav-item-link">Our Campaigns</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Piloting Solutions</a></span>
+                                    <span><a href="" class="nav-item-link">Piloting Solutions</a></span>
                                 </li>
                             </div>
                         </ul>
@@ -224,24 +253,19 @@
                             </div>
                             <div class="dropdown-item-outer">
                                 <li class="dropdown-item">
-                                    <span><a href="{{ route('donate.view')}}"
-                                            class="nav-item-link">Donate</a></span>
+                                    <span><a href="{{ route('donate.view') }}" class="nav-item-link">Donate</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Fundraise for us</a></span>
+                                    <span><a href="" class="nav-item-link">Fundraise for us</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Corporate Partners</a></span>
+                                    <span><a href="" class="nav-item-link">Corporate Partners</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Leave a Legacy</a></span>
+                                    <span><a href="" class="nav-item-link">Leave a Legacy</a></span>
                                 </li>
                                 <li class="dropdown-item">
-                                    <span><a href=""
-                                            class="nav-item-link">Philanthropy and Trusts</a></span>
+                                    <span><a href="" class="nav-item-link">Philanthropy and Trusts</a></span>
                                 </li>
                             </div>
                         </ul>
@@ -271,8 +295,9 @@
                             name="s">
                         <button class="search-button" type="submit" title="Search submit"
                             aria-label="Search submit">
-                            <img src="{{ asset('images/search-svgrepo-com.svg') }}" alt="" class="search-icon">
-                        </span>
+                            <img src="{{ asset('images/search-svgrepo-com.svg') }}" alt=""
+                                class="search-icon">
+                            </span>
                         </button>
                     </div>
                 </form>
@@ -288,7 +313,7 @@
             </nav>
 
             <div class="header-links clearfix">
-                <a href="{{ route('donate.view')}}" class="button-secondary">Donate</a>
+                <a href="{{ route('donate.view') }}" class="button-secondary">Donate</a>
             </div>
 
 
@@ -319,14 +344,13 @@
 
 
                     <button class="rnav-arrow" aria-expanded="false">
-                        <img src="{{ asset('images/down-arrow-svgrepo-com.svg')}}" alt="" class="icon">
+                        <img src="{{ asset('images/down-arrow-svgrepo-com.svg') }}" alt="" class="icon">
                     </button>
 
                     <ul class="rnav-dropdown" aria-expanded="false" aria-label="Why we exist submenu"
                         role="tablist">
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">History</a>
+                            <a href="" class="rnav-item-link">History</a>
                         </li>
                         <li class="rnav-item" role="tab">
                             <a href="" class="rnav-item-link">Our
@@ -348,9 +372,10 @@
 
 
                     <button class="rnav-arrow" aria-expanded="false">
-                                            <button class="rnav-arrow" aria-expanded="false">
-                        <img src="{{ asset('images/down-arrow-svgrepo-com.svg')}}" alt="" class="icon">
-                    </button>
+                        <button class="rnav-arrow" aria-expanded="false">
+                            <img src="{{ asset('images/down-arrow-svgrepo-com.svg') }}" alt=""
+                                class="icon">
+                        </button>
                     </button>
 
                     <ul class="rnav-dropdown" aria-expanded="false" aria-label="Who we are submenu" role="tablist">
@@ -376,32 +401,28 @@
 
 
                     <button class="rnav-arrow" aria-expanded="false">
-                                            <button class="rnav-arrow" aria-expanded="false">
-                        <img src="{{ asset('images/down-arrow-svgrepo-com.svg')}}" alt="" class="icon">
-                    </button>
+                        <button class="rnav-arrow" aria-expanded="false">
+                            <img src="{{ asset('images/down-arrow-svgrepo-com.svg') }}" alt=""
+                                class="icon">
+                        </button>
                     </button>
 
                     <ul class="rnav-dropdown" aria-expanded="false" aria-label="Explore the issues submenu"
                         role="tablist">
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">Our Research and Insights</a>
+                            <a href="" class="rnav-item-link">Our Research and Insights</a>
                         </li>
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">News and Opinion</a>
+                            <a href="" class="rnav-item-link">News and Opinion</a>
                         </li>
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">In the Press</a>
+                            <a href="" class="rnav-item-link">In the Press</a>
                         </li>
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">Podcast</a>
+                            <a href="" class="rnav-item-link">Podcast</a>
                         </li>
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">Sign up to our Newsletter</a>
+                            <a href="" class="rnav-item-link">Sign up to our Newsletter</a>
                         </li>
                     </ul>
 
@@ -412,28 +433,26 @@
 
 
                     <button class="rnav-arrow" aria-expanded="false">
-                                            <button class="rnav-arrow" aria-expanded="false">
-                        <img src="{{ asset('images/down-arrow-svgrepo-com.svg')}}" alt="" class="icon">
-                    </button>
+                        <button class="rnav-arrow" aria-expanded="false">
+                            <img src="{{ asset('images/down-arrow-svgrepo-com.svg') }}" alt=""
+                                class="icon">
+                        </button>
                     </button>
 
                     <ul class="rnav-dropdown" aria-expanded="false" aria-label="Creating change submenu"
                         role="tablist">
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">Partnerships and Consultancy</a>
+                            <a href="" class="rnav-item-link">Partnerships and Consultancy</a>
                         </li>
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">Policy Positions</a>
+                            <a href="" class="rnav-item-link">Policy Positions</a>
                         </li>
                         <li class="rnav-item" role="tab">
                             <a href="" class="rnav-item-link">Our
                                 Campaigns</a>
                         </li>
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">Piloting Solutions</a>
+                            <a href="" class="rnav-item-link">Piloting Solutions</a>
                         </li>
                     </ul>
 
@@ -444,30 +463,28 @@
 
 
                     <button class="rnav-arrow" aria-expanded="false">
-                                            <button class="rnav-arrow" aria-expanded="false">
-                        <img src="{{ asset('images/down-arrow-svgrepo-com.svg')}}" alt="" class="icon">
-                    </button>
+                        <button class="rnav-arrow" aria-expanded="false">
+                            <img src="{{ asset('images/down-arrow-svgrepo-com.svg') }}" alt=""
+                                class="icon">
+                        </button>
                     </button>
 
                     <ul class="rnav-dropdown" aria-expanded="false" aria-label="Take action submenu" role="tablist">
                         <li class="rnav-item" role="tab">
-                            <a href="{{ route('donate.view')}}" class="rnav-item-link">Donate</a>
+                            <a href="{{ route('donate.view') }}" class="rnav-item-link">Donate</a>
                         </li>
                         <li class="rnav-item" role="tab">
                             <a href="" class="rnav-item-link">Fundraise
                                 for us</a>
                         </li>
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">Corporate Partners</a>
+                            <a href="" class="rnav-item-link">Corporate Partners</a>
                         </li>
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">Leave a Legacy</a>
+                            <a href="" class="rnav-item-link">Leave a Legacy</a>
                         </li>
                         <li class="rnav-item" role="tab">
-                            <a href=""
-                                class="rnav-item-link">Philanthropy and Trusts</a>
+                            <a href="" class="rnav-item-link">Philanthropy and Trusts</a>
                         </li>
                     </ul>
 
@@ -479,44 +496,33 @@
                         <a href="" class="rnav-item-link">Contact us</a>
                     </li>
                     <li class="rnav-secnav-item" role="tab">
-                        <a href=""
-                            class="rnav-item-link">News and Opinion</a>
+                        <a href="" class="rnav-item-link">News and Opinion</a>
                     </li>
                 </ul>
 
                 <li class="rnav-item" role="tab">
-                    <a href="" class="rnav-item-link"><svg
-                        aria-hidden="true" class="icon">
-                        <use
-                            xlink:href="" />
-                    </svg> Facebook</a>
+                    <a href="" class="rnav-item-link"><svg aria-hidden="true" class="icon">
+                            <use xlink:href="" />
+                        </svg> Facebook</a>
                 </li>
                 <li class="rnav-item" role="tab">
-                    <a href="" class="rnav-item-link"><svg
-                            aria-hidden="true" class="icon">
-                            <use
-                                xlink:href="" />
+                    <a href="" class="rnav-item-link"><svg aria-hidden="true" class="icon">
+                            <use xlink:href="" />
                         </svg> Instagram</a>
                 </li>
                 <li class="rnav-item" role="tab">
-                    <a href="" class="rnav-item-link"><svg aria-hidden="true"
-                            class="icon">
-                            <use
-                                xlink:href="" />
+                    <a href="" class="rnav-item-link"><svg aria-hidden="true" class="icon">
+                            <use xlink:href="" />
                         </svg> Twitter</a>
                 </li>
                 <li class="rnav-item" role="tab">
-                    <a href="" class="rnav-item-link"><svg
-                            aria-hidden="true" class="icon">
-                            <use
-                                xlink:href="" />
+                    <a href="" class="rnav-item-link"><svg aria-hidden="true" class="icon">
+                            <use xlink:href="" />
                         </svg> Linkedin</a>
                 </li>
                 <li class="rnav-item" role="tab">
-                    <a href="" class="rnav-item-link"><svg
-                            aria-hidden="true" class="icon">
-                            <use
-                                xlink:href="" />
+                    <a href="" class="rnav-item-link"><svg aria-hidden="true" class="icon">
+                            <use xlink:href="" />
                         </svg> Tiktok</a>
                 </li>
             </ul>
@@ -539,17 +545,6 @@
 
 
             <div class="container">
-            @if (session('success'))
-                <div class="alert alert-success" id="success-message">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            @if ($errors->any())
-                <div class="alert alert-danger" id="error-message">
-                    {{ $errors->first('error') }}
-                </div>
-            @endif
                 <div class="media-block">
 
                     <figure class="media-block-element">
@@ -557,45 +552,88 @@
                             sizes="(min-width: 1280px) 608px, (min-width: 960px) 40vw, 70vw"
                             src="{{ asset('images/1.jpg') }}" alt="Are you with us?">
                     </figure>
-
-
-
-
                     <div class="media-block-info">
                         <h2 class="media-block-title">Donate Here</h2>
-                        
+
                         <div class="media-block-content">
-                            
-                            <form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
-                                @csrf 
-                                 <input type="hidden" name="public_key" value="FLWPUBK_TEST-220400560d763d644d74bfad289ff6af-X" />
-                                <div class="form-group"> 
+
+                            <form method="POST" action="{{ route('payment.store') }}">
+                                @if (session('success'))
+                                    <div class=""
+                                        style="width: 100%;background: green;color: white;padding: 10px 20px;">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+                                @if (session('error'))
+                                    <div class=""
+                                        style="width: 100%;background: red;color: white;padding: 10px 20px;">
+                                        {{ session('error') }}
+                                    </div>
+                                @endif
+                                @csrf
+                                <div class="form-group">
                                     <label for="name">Name:</label>
                                     <input type="text" class="form-control" id="donator_names"
-                                        name="customer[name]" placeholder="Enter your name">
+                                        name="donator_names" placeholder="Enter your names">
+                                </div>
+                                <div class="form-group">
+                                    <label for="donator_phone">Phone:</label>
+                                    <input type="tel" class="form-control" id="donator_phone"
+                                        name="donator_phone" placeholder="Enter your phone number">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="phone">Email Address:</label>
-                                    <input type="email" class="form-control" id="email" name="customer[email]" 
+                                    <input type="email" class="form-control" id="email" name="email"
                                         placeholder="Email Address">
                                 </div>
-                                <input type="hidden" name="redirect_url" value="http://thecornerstone.rw/donate" />
-                                  <input type="hidden" name="tx_ref" value="txref-81123" />
-
+                                <div class="form-group">
+                                    <label for="currency">Currency :</label>
+                                    <select class="form-control" id="currency" name="currency" style="width:100%">
+                                        <option>RWF</option>
+                                        <option>USD</option>
+                                    </select>
+                                </div>
                                 <div class="form-group">
                                     <label for="amount">Amount:</label>
                                     <input type="number" class="form-control" id="amount" name="amount"
                                         placeholder="Enter the amount (RWF)">
                                 </div>
-                                  <input type="hidden" name="currency" value="RWF" />
-
+                                <div class="container par ent">
+                                    <div class="row">
+                                        <div class='col-lg-12 mb-4 text-center'
+                                            style="margin-top: 10px;border: 1px solid blue;padding: 5px 20px">
+                                            <input type="radio" name="payment_method" id="img1"
+                                                class="d-none imgbgchk" value="paypal">
+                                            <label for="img1">
+                                                <img style="height:50px"
+                                                    src="{{ asset('/images/PayPal_MR_ICON-removebg-preview.png') }}"
+                                                    alt="paypal Logo" class="img-fluid mb-4">
+                                                <div class="tick_container">
+                                                    <div class="tick"><i class="fa fa-check"></i></div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class=' col-lg-12  text-center'
+                                            style="margin-top: 10px;border: 1px solid orange;padding: 5px 20px">
+                                            <input type="radio" name="payment_method" id="img2"
+                                                class="d-none imgbgchk" value="momo">
+                                            <label for="img2">
+                                                <img src="https://uploads-eu-west-1.insided.com/mtngroup-en/attachment/96f3ec28-bc42-49ee-be5d-6ed5345e516c_thumb.png"
+                                                    alt="KPay Logo" class="img-fluid " style="height:50px">
+                                                <div class="tick_container">
+                                                    <div class="tick"><i class="fa fa-check"></i></div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <button type="submit" class="mt-xl-4 buttonna" id="start-payment-button"
                                     style="border: solid #7a277c 2px; background:#7a277c; height:43px; box-shadow: none; color: #fff; text-decoration: none; margin-top: 20px;">Proceed
                                     to Pay</button>
 
                             </form>
-                            
+
 
 
                         </div>
@@ -614,7 +652,7 @@
     </main>
 
 
-     <footer class="section footer">
+    <footer class="section footer">
         <div class="footer-header-outer">
             <div class="footer-header">
 
@@ -680,21 +718,21 @@
                 <div class="footer-nav-wrap">
                     <h6 class="footer-nav-header">Follow us</h6>
                     <ul class="footer-nav social">
-                    <li class="footer-nav-item">
-                        <a href="" target="" class="nav-item-link">Facebook</a>
-                    </li>
-                    <li class="footer-nav-item">
-                        <a href="" target="" class="nav-item-link">Instagram</a>
-                    </li>
-                    <li class="footer-nav-item">
-                        <a href="" target="" class="nav-item-link">Twitter</a>
-                    </li>
-                    <li class="footer-nav-item">
-                        <a href="" target="" class="nav-item-link">LinkedIn</a>
-                    </li>
-                    <li class="footer-nav-item">
-                        <a href="" target="" class="nav-item-link">TikTok</a>
-                    </li>
+                        <li class="footer-nav-item">
+                            <a href="" target="" class="nav-item-link">Facebook</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a href="" target="" class="nav-item-link">Instagram</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a href="" target="" class="nav-item-link">Twitter</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a href="" target="" class="nav-item-link">LinkedIn</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a href="" target="" class="nav-item-link">TikTok</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -708,7 +746,7 @@
                 <p class="charity-info">The Cornerstone, Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
                     vero pariatur obcaecati nostrum voluptatibus! Assumenda ut deserunt recusandae perferendis porro
                     cumque optio labore reiciendis ipsa quis, fuga culpa molestias unde!</p>
-            </div> 
+            </div>
         </div>
     </footer>
 
@@ -924,9 +962,7 @@
     </script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?ver=3.4.1'
         id='jquery-js'></script>
-    <script type='text/javascript'
-        src='{{ asset('js/loading.js') }}?ver=2.0'
-        id='pagebuildermin_js-js'></script>
+    <script type='text/javascript' src='{{ asset('js/loading.js') }}?ver=2.0' id='pagebuildermin_js-js'></script>
 
 
     <script type="text/javascript"></script>

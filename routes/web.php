@@ -21,5 +21,10 @@ Route::get('/donate', [PaymentController::class, 'view'])->name('donate.view');
 Route::get('/who-we-are/about-us', [Homecontroller::class, 'index'])->name('who-we-are.about-us');
 Route::get('/why-we-exist/history', [Homecontroller::class, 'history'])->name('why-we-exist.history');
 
-Route::any('payment-store', [PaymentController::class, 'store'])->name('payment.store');
+Route::post('payment-store', [PaymentController::class, 'store'])->name('payment.store');
+
+
+Route::get('payment-store/paypal', [PaymentController::class, 'store'])->name('paypal.payment.store');
+Route::get('payment-store/paypal/success', [PaymentController::class, 'successTransaction'])->name('paypal.payment.successTransaction');
+Route::get('payment-store/paypal/cancel', [PaymentController::class, 'cancelTransaction'])->name('paypal.payment.cancelTransaction');
 
